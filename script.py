@@ -15,6 +15,8 @@ contenido = respuesta.text  # El contenido de respuesta se transforma a texto y 
 
 soup = BeautifulSoup(contenido, 'lxml')  ## Se parsean los datos
 
-print(soup.prettify()) ## Todo listo para mostrar en formato HTML para luego sacar los datos que nos interesan
+soup_pretty = soup.prettify()
+
+print(soup_pretty) ## Todo listo para mostrar en formato HTML para luego sacar los datos que nos interesan
 
 ## Fin del script
