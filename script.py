@@ -7,6 +7,8 @@ import requests
 
 web = "https://www.musimundo.com/informatica/notebook/c/98" # Esta es la web de donde vamos a sacar los datos
 
+nuestro_headers ={'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/21.0'} # Se agrega un "User Agent"
+
 respuesta = requests.get(web)   # Todo lo que se extrajo se guarda en la variable respuesta
 
 contenido = respuesta.text  # El contenido de respuesta se transforma a texto y se guarda en contenido
