@@ -39,3 +39,10 @@ for pre in po:
     
 print(title)    
 print(precio)
+
+import pandas as pd
+
+df = pd.DataFrame({'            Descripcion': title, 'Precio   ': precio},index=list(range(0, 21)))#con la libreria pandas se forma un diccionario y se muesta los dato en forma de tabla
+print(df)
+
+df.to_csv('notebook.csv', index= True)#Por ultimo se crea un archivo CSV.
