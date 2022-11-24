@@ -7,9 +7,15 @@ import requests
 
 web = "https://www.musimundo.com/informatica/notebook/c/98" # Esta es la web de donde vamos a sacar los datos
 
+nuestro_heders = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/21.0'}# se agrega un  user agente para no ser bloqueados por la paquina.
 
+res= requests.get(web, headers= nuestro_heders) #Con esta linea de codigo, podemos ver el estado de conección  que nos devuelve la pagina, si es 200 es bueno.
 
-respuesta = requests.get(web)   # Todo lo que se extrajo se guarda en la variable respuestanuestro_headers ={'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/21.0'} # Se agrega un "User Agent"
+res.status_code
+
+print(res)
+
+respuesta = requests.get(web)   # Todo lo que se extrajo se guarda en la variable respuesta.
 
 contenido = respuesta.text  # El contenido de respuesta se transforma a texto y se guarda en contenido
 
